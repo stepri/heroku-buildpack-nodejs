@@ -19,6 +19,14 @@ install_node_modules() {
       echo "Installing node modules (package.json)"
     fi
     npm install --unsafe-perm --userconfig $build_dir/.npmrc 2>&1
+    
+    npm install bower
+    
+    $build_dir/node_modules/bower/bin/bower install
+    
+    npm install gulp
+    
+    $build_dir/node_modules/gulp/bin/gulp
   else
     echo "Skipping (no package.json)"
   fi
