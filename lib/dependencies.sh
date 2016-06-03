@@ -26,7 +26,7 @@ install_node_modules() {
     
     npm install gulp
     
-    $build_dir/node_modules/gulp/bin/gulp
+    $build_dir/node_modules/gulp/bin/gulp build
   else
     echo "Skipping (no package.json)"
   fi
